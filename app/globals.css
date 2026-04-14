@@ -22,14 +22,31 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(217, 70, 239, 0.16), transparent 25%),
-    linear-gradient(180deg, #091018 0%, #0b0f14 100%);
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.22), transparent 22%),
+    radial-gradient(circle at top right, rgba(217, 70, 239, 0.16), transparent 20%),
+    linear-gradient(180deg, #070c14 0%, #090c12 35%, #0b0f14 100%);
   color: var(--text);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   border-color: var(--line);
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(20, 184, 166, 0.24);
+  color: #ffffff;
+}
+
+.noise-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.12) 1px, transparent 0);
+  background-size: auto, 28px 28px;
 }
 
 .noise-overlay {
