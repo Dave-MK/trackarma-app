@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f14;
+  --bg-elevated: #121821;
+  --bg-soft: #16202d;
+  --text: #edf5f7;
+  --muted: #8ca1b3;
+  --teal: #14b8a6;
+  --magenta: #d946ef;
+  --line: rgba(255, 255, 255, 0.08);
+  --font-display: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(217, 70, 239, 0.16), transparent 25%),
+    linear-gradient(180deg, #091018 0%, #0b0f14 100%);
+  color: var(--text);
+}
+
+* {
+  border-color: var(--line);
+}
+
+.noise-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.015)),
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.12) 1px, transparent 0);
+  background-size: auto, 28px 28px;
+}
